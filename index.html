@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Encriptador challenge</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="./assets/Logo.png">
+</head>
+<body>
+
+    <main class="main">
+        <section class="presentacion">
+            <div class="cabecera">
+                <img src="./assets/Logo.png" class="picture1" alt="logo de alura">
+            </div>
+            <div class="afterCabecera">
+                <textarea id="myTextArea" placeholder="Ingrese el texto aquí" class="presentacion__textoEntrada__textarea" name="textarea" ></textarea>
+                <div class="presentacion__textoEntrada__aviso">
+                    <img class="presentacion__textoEntrada__aviso__logo" src="./assets/Screenshot_2024-06-26_190547-removebg-preview.png">
+                    <p class="presentacion__textoEntrada__aviso__text">
+                        Solo letras minúsculas y sin acentos
+                    </p>                    
+                </div>
+                <div class="presentacion__botones">
+                    <button onclick="botonEncriptar();" class="presentacion__boton" id="presentacion__boton">Encriptar</button>
+                    <button onclick="botonDesencriptar();" class="presentacion__boton dos">Desencriptar</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="lateral__derecho">
+            <div class="showText" id="showText">
+                <p id="showTextEncrypted">
+                </p>
+            </div>
+            <img src="./assets/Muñeco.png" alt="imagen de un muñeco" class="pictureCopy" id="pictureCopy">
+            <div class="lateral__derecho__text" id="lateral__derecho__text">
+                <p class="titleThisBox">Ningún mensaje fue encontrado</p>
+                <p class="textBox">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            
+            <button onclick="copiarTexto();" class="botonCopiar" id="botonCopiar">Copiar</button>
+        </div>
+    </main>
+
+    <footer class="footer">
+
+
+    </footer>
+
+    <script src="./functionality js/script.js"></script>
+
+</body>
+</html>
