@@ -1,7 +1,7 @@
-const textoCopiado = document.querySelector(".presentacion__textoEntrada__textarea");
+const textoCopiado = document.querySelector(".texto_ingreso");
 const textoInterno = document.getElementById('showTextEncrypted');
 const botonCopy = document.getElementById('botonCopiar');
-const aviso = document.querySelector(".presentacion__textoEntrada__aviso__text");
+const aviso = document.querySelector(".aviso_text");
 
 
 
@@ -22,12 +22,13 @@ function encriptarTexto(textoEncriptado)
     let data = [["e","enter"],["i","imes"],["a", "ai"],["o","ober"],["u","ufat"]];
     for (let i = 0; i < textoEncriptado.length; i++)
     {
-        if (textoEncriptado.charCodeAt(i)>122 || textoEncriptado.charCodeAt(i)<97)
+        if ((textoEncriptado.charCodeAt(i)>122 || textoEncriptado.charCodeAt(i)<97) && textoEncriptado.charCodeAt(i) !== 32)
         {
             aviso.innerHTML = 'El texto escrito no debe contener caracteres especiales, no debe contener acentos y sin mayúsculas!!!';
             noMostrarTexto();
             return;
-        }
+        } 
+        
     }
     for (let i = 0; i < data.length; i++) 
     {
@@ -67,7 +68,7 @@ function copiarTexto(){
 function mostrarTexto()
 {
     document.getElementById('pictureCopy').style.display = 'none';
-    document.getElementById('lateral__derecho__text').style.display = 'none';
+    document.getElementById('texto_resultado').style.display = 'none';
     document.getElementById('botonCopiar').style.visibility = 'visible';
     document.getElementById('botonCopiar').innerHTML = 'Copiar';
     document.getElementById('botonCopiar').style.backgroundColor = 'white';
@@ -76,8 +77,9 @@ function mostrarTexto()
 }
 function noMostrarTexto(){
     document.getElementById('pictureCopy').style.display = 'block';
-    document.getElementById('lateral__derecho__text').style.display = 'block';
+    document.getElementById('texto_resultado').style.display = 'block';
     document.getElementById('botonCopiar').style.visibility = 'hidden';
     document.querySelector('.showText').style.visibility = 'hidden';
 };
+
 
