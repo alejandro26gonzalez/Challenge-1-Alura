@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Encriptador challenge</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="Logo.png">
+    <link rel="icon" href="./assets/Logo.png">
 </head>
 <body>
 
@@ -15,27 +15,27 @@
                 <img src="./assets/Logo.png" class="picture1" alt="logo de alura">
             </div>
             <div class="afterCabecera">
-                <textarea id="myTextArea" placeholder="Ingrese el texto aquí" class="presentacion__textoEntrada__textarea" name="textarea" ></textarea>
-                <div class="presentacion__textoEntrada__aviso">
-                    <img class="presentacion__textoEntrada__aviso__logo" src="Screenshot_2024-06-26_190547-removebg-preview.png">
-                    <p class="presentacion__textoEntrada__aviso__text">
+                <textarea id="myTextArea" placeholder="Ingrese el texto aquí" class="texto_ingreso" name="textarea" ></textarea>
+                <div class="aviso">
+                    <img class="aviso_logo" src="./assets/Screenshot_2024-06-26_190547-removebg-preview.png">
+                    <p class="aviso_text">
                         Solo letras minúsculas y sin acentos
                     </p>                    
                 </div>
-                <div class="presentacion__botones">
-                    <button onclick="botonEncriptar();" class="presentacion__boton" id="presentacion__boton">Encriptar</button>
-                    <button onclick="botonDesencriptar();" class="presentacion__boton dos">Desencriptar</button>
+                <div class="botones">
+                    <button onclick="botonEncriptar();" class="boton" id="boton">Encriptar</button>
+                    <button onclick="botonDesencriptar();" class="boton dos">Desencriptar</button>
                 </div>
             </div>
         </section>
 
-        <div class="lateral__derecho">
+        <div class="derecha">
             <div class="showText" id="showText">
                 <p id="showTextEncrypted">
                 </p>
             </div>
-            <img src="Muñeco.png" alt="imagen de un muñeco" class="pictureCopy" id="pictureCopy">
-            <div class="lateral__derecho__text" id="lateral__derecho__text">
+            <img src="./assets/Muñeco.png" alt="imagen de un muñeco" class="pictureCopy" id="pictureCopy">
+            <div class="texto_resultado" id="texto_resultado">
                 <p class="titleThisBox">Ningún mensaje fue encontrado</p>
                 <p class="textBox">Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
@@ -45,11 +45,12 @@
     </main>
 
     <footer class="footer">
-
-
+        <p class="dev">Desarrollado por Diego Alejandro Gonzalez</p>
+        <p class="footer_year">2024</p>
+        <p class="company">Alura Latam | Oracle</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./functionality js/script.js"></script>
 
 </body>
 </html>
